@@ -11,7 +11,7 @@
 
     - ROS1 : 중앙 집중식 
     - ROS2 : DDS(Data Distribution Service)를 기반으로 한 분산 통신 
-* DDS의 핵심모델 DCPS(Data-Centric Publish-Subscribe)
+* ROS2에서 사용하는 DDS의 모델 DCPS-RTPS(Data-Centric Publish-Subscribe)
 ![](./dcps.png)
     - Global Data Space : 참여자들간의 데이터 교환을 위한 공간 
     - 분산 네트워크 : 여러 장치가 네트워크를 통해 상호 연결

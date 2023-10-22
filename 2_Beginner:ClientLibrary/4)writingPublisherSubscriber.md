@@ -26,6 +26,11 @@ ros2 pkg create --build-type ament_cmake cpp_pubsub
 
 ### 2-2 publisher node 작성하기
 * 아래 명령 실행하여 talker 코드 다운받기 (ros2_ws/src/cpp_pubsub/src 아래)
+
+```bash
+cd ~/ros2_ws/src/cpp_pubsub/src
+```
+
 ```bash
 wget -O publisher_member_function.cpp https://raw.githubusercontent.com/ros2/examples/humble/rclcpp/topics/minimal_publisher/member_function.cpp
 ```
@@ -78,8 +83,14 @@ int main(int argc, char * argv[])
 }
 ```
 
-### 2-2-1 의존성(dependencies) 추가
+### 2-2-1 Package.xml 의존성(dependencies) 추가
 * ros2_ws/src/cpp_pubsub 디렉토리 아래 CMakeLists.txt와 package.xml 파일이 존재
+
+```bash
+cd ~/ros2_ws/src/cpp_pubsub
+```
+
+```
 
 * package.xml 파일 열기
 ```xml
@@ -88,7 +99,7 @@ int main(int argc, char * argv[])
 <license>Apache License 2.0</license>
 ```
 
-* ament_cmake buildtool dependency 뒤에 아래 코드 추가
+*   <buildtool_depend>ament_cmake</buildtool_depend> 뒤에 아래 코드 추가
 ```xml
 <depend>rclcpp</depend>
 <depend>std_msgs</depend>

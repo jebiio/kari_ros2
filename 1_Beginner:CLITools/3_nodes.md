@@ -124,4 +124,3 @@ ros2 node info /my_turtle
 ```bash
 ros2 node info /teleop_turtle
 ```
-
